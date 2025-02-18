@@ -7,6 +7,7 @@ public class Main {
         int pocetfilmu;
         System.out.println("kolik chces filmu");
         pocetfilmu = sc.nextInt();
+        sc.nextLine();
         Film[] filmy = new Film[pocetfilmu];
         for (int i = 0; i < pocetfilmu; i++) {
             System.out.println("Nazev filmu");
@@ -29,8 +30,29 @@ public class Main {
                 System.out.println("Datum narozeni");
                 int narozeniherce = sc.nextInt();
                 sc.nextLine();
+                herci[j] = new Herec(jmenoherce, narozeniherce);
+            }
+            filmy[i] = new Film(nazevfilmu, vydanifilmu, hodnocenifilmu,herci);
+        }
+
+
+        System.out.println("Filmy ktere maji hodnoceni vetsi jak 80 jsou");
+        for (int i = 0; i < pocetfilmu; i++) {
+            if (filmy[i].getHodnoceni() > 80) {
+                System.out.println(filmy[i].getNazev()+"je nazev filmu");
             }
         }
+
+
+
+        System.out.println("Nejlepsi je");
+        Film nejlepsi=filmy[0];
+        for (int i = 0; i < pocetfilmu; i++) {
+            if (filmy[i].getHodnoceni() > ) {}
+        }
+
+
+
 
 
 
